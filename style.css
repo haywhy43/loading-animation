@@ -1,0 +1,378 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  transition: all 500ms;
+}
+
+.main-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100vh;
+  background-color: black;
+  animation: loader 10s ease-out normal both;
+}
+
+.header {
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: white;
+}
+
+h1 {
+  position: relative;
+  color: #fff;
+  font-size: 5vw;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  word-spacing: 2rem;
+  display: flex;
+}
+
+span.double {
+  display: flex;
+}
+
+span.double span {
+  margin-right: 0px !important;
+}
+
+span {
+  margin-right: 24px;
+}
+
+span.wel {
+  animation: animate_wel 1.5s ease-in-out 1 normal both;
+}
+
+span.wel::after {
+  content: counter(wel, upper-alpha);
+}
+
+span.come {
+  animation: animate_come 1.5s ease-in-out 1 normal both;
+}
+
+span.come::after {
+  content: counter(come, upper-alpha);
+}
+
+span.to {
+  animation: animate_to 1.5s ease-in-out 1.5s 1 normal both;
+}
+
+span.to::after {
+  content: counter(to, upper-alpha);
+}
+
+span.my {
+  animation: animate_my 1.5s ease-in-out 3s 1 normal both;
+}
+
+span.my::after {
+  content: counter(my, upper-alpha);
+}
+
+span.port {
+  animation: animate_port 1.5s ease-in-out 4.5s 1 normal both;
+}
+
+span.port::after {
+  content: counter(port, upper-alpha);
+}
+
+span.folio {
+  animation: animate_folio 1.5s ease-in-out 4.5s 1 normal both;
+}
+
+span.folio::after {
+  content: counter(folio, upper-alpha);
+}
+
+/*  targeting safari only since safari does not suppoet counter-set */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    span.wel::after {
+      content: "WEL";
+    }
+    span.come::after {
+      content: "COME";
+    }
+    span.to::after {
+      content: "TO";
+    }
+    span.my::after {
+      content: "MY";
+    }
+    span.port::after {
+      content: "PORT";
+    }
+    span.folio::after {
+      content: "FOLIO";
+    }
+  }
+}
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fade_shrink_away {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes animate_wel {
+  0% {
+    counter-set: wel 15590;
+  }
+  10% {
+    counter-set: wel 15600;
+  }
+  20% {
+    counter-set: wel 15610;
+  }
+  30% {
+    counter-set: wel 15620;
+  }
+  40% {
+    counter-set: wel 15630;
+  }
+  50% {
+    counter-set: wel 15640;
+  }
+  60% {
+    counter-set: wel 15650;
+  }
+  70% {
+    counter-set: wel 15660;
+  }
+  80% {
+    counter-set: wel 15670;
+  }
+  90% {
+    counter-set: wel 15680;
+  }
+  100% {
+    counter-set: wel 15690;
+  }
+}
+
+@keyframes animate_come {
+  0% {
+    counter-set: come 63111;
+  }
+  10% {
+    counter-set: come 63121;
+  }
+  20% {
+    counter-set: come 63131;
+  }
+  30% {
+    counter-set: come 63141;
+  }
+  40% {
+    counter-set: come 63151;
+  }
+  50% {
+    counter-set: come 63161;
+  }
+  60% {
+    counter-set: come 63171;
+  }
+  70% {
+    counter-set: come 63181;
+  }
+  80% {
+    counter-set: come 63191;
+  }
+  90% {
+    counter-set: come 63201;
+  }
+  100% {
+    counter-set: come 63211;
+  }
+}
+
+@keyframes animate_to {
+  0% {
+    counter-set: to 435;
+  }
+  10% {
+    counter-set: to 445;
+  }
+  20% {
+    counter-set: to 455;
+  }
+  30% {
+    counter-set: to 465;
+  }
+  40% {
+    counter-set: to 475;
+  }
+  50% {
+    counter-set: to 485;
+  }
+  60% {
+    counter-set: to 495;
+  }
+  70% {
+    counter-set: to 505;
+  }
+  80% {
+    counter-set: to 515;
+  }
+  90% {
+    counter-set: to 525;
+  }
+  100% {
+    counter-set: to 535;
+  }
+}
+
+@keyframes animate_my {
+  0% {
+    counter-set: my 263;
+  }
+  10% {
+    counter-set: my 273;
+  }
+  20% {
+    counter-set: my 283;
+  }
+  30% {
+    counter-set: my 293;
+  }
+  40% {
+    counter-set: my 303;
+  }
+  50% {
+    counter-set: my 313;
+  }
+  60% {
+    counter-set: my 323;
+  }
+  70% {
+    counter-set: my 333;
+  }
+  80% {
+    counter-set: my 343;
+  }
+  90% {
+    counter-set: my 353;
+  }
+  100% {
+    counter-set: my 363;
+  }
+}
+
+@keyframes animate_port {
+  0% {
+    counter-set: port 291744;
+  }
+  10% {
+    counter-set: port 291754;
+  }
+  20% {
+    counter-set: port 291764;
+  }
+  30% {
+    counter-set: port 291774;
+  }
+  40% {
+    counter-set: port 291784;
+  }
+  50% {
+    counter-set: port 291794;
+  }
+  60% {
+    counter-set: port 291804;
+  }
+  70% {
+    counter-set: port 291814;
+  }
+  80% {
+    counter-set: port 291824;
+  }
+  90% {
+    counter-set: port 291834;
+  }
+  100% {
+    counter-set: port 291844;
+  }
+}
+
+@keyframes animate_folio {
+  0% {
+    counter-set: folio 3013757;
+  }
+  10% {
+    counter-set: folio 3013767;
+  }
+  20% {
+    counter-set: folio 3013777;
+  }
+  30% {
+    counter-set: folio 3013787;
+  }
+  40% {
+    counter-set: folio 3013797;
+  }
+  50% {
+    counter-set: folio 3013807;
+  }
+  60% {
+    counter-set: folio 3013817;
+  }
+  70% {
+    counter-set: folio 3013827;
+  }
+  80% {
+    counter-set: folio 3013837;
+  }
+  90% {
+    counter-set: folio 3013847;
+  }
+  100% {
+    counter-set: folio 3013857;
+  }
+}
